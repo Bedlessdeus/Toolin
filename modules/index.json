@@ -1,0 +1,16 @@
+{
+    "modules": [
+        {
+            "name": "Integer to Binary",
+            "url": "int_bin.mod"
+        },
+        {
+            "name": "Integer to Hex",
+            "url": "int_hex.mod"
+        },
+        {
+            "name": "Integer to Octal",
+            "url": "int_oct.mod"
+        }
+    ]
+}

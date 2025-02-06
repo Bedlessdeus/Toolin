@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h1 class="Title">Toolin</h1>
+    </div>
+    <div class="main-content">
+        Notin Here :D
+    </div>
+
+    <script>
+        fetch('/modules/index.json')
+            .then(response => response.json())
+            .then(data => {
+                const sidebar = document.getElementById('sidebar');
+                data["modules"].forEach(module => {
+                    const link = document.createElement('button');
+                    link.innerText = module.name;
+                    link.onclick = () => {
+                        fetch('/modules/' + module.url)
+                            .then(response => response.text())
+                            .then(html => {
+                                document.querySelector('.main-content').innerHTML = html;
+                                document.querySelectorAll('module-script').forEach(script => {
+                                    const newScript = document.createElement('script');
+                                    newScript.innerHTML = script.innerText;
+                                    document.body.appendChild(newScript);
+                                });
+                            })
+                            .catch(error => console.error('Error fetching module:', error));
+                    };
+                    sidebar.appendChild(link);
+                });
+            })
+            .catch(error => console.error('Error fetching modules:', error));
+
+        document.querySelector('form').onsubmit = (e) => {
+            e.preventDefault();
+        };
+    </script>
+</body>
+</html>

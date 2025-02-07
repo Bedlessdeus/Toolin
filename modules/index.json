@@ -11,6 +11,10 @@
         {
             "name": "Integer to Octal",
             "url": "int_oct.mod"
+        },
+        {
+            "name": "Experimental Mod",
+            "url": "test.emod"
         }
     ]
 }

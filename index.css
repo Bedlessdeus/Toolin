@@ -1,26 +1,47 @@
-/* Import Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Base styles */
+:root {
+    --primary-default: #004d40;
+    --primary-secondary: #00695c;
+    --primary-hover: #004d40;
+    --light-background: #e0f7fa;
+    --light-color: #00796b;
+    --button-background: #00695c;
+    --button-hover: #004d40;
+    --button-light-background: #00acc1;
+    --button-light-hover: #00838f;
+    --input-color: #b2dfdb;
+    --input-border: #00796b;
+    --input-light-background: #ffffff;
+    --input-light-border: #00acc1;
+    --input-light-focus-border: #00838f;
+    --sidebar-background: #004d40;
+    --sidebar-hover: #00796b;
+    --main-content-background: #00796b;
+    --text-color: #b2dfdb;
+}
+
+*:not(input) {
+    user-select: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #004d40; /* Dark cyan background for dark mode */
-    color: #b2dfdb; /* Light blue text color */
+    background-color: var(--primary-default);
+    color: var(--input-color);
     margin: 0;
     padding: 0 !important;
 }
 
-/* Light mode styles */
 body.light-mode {
-    background-color: #e0f7fa; /* Light blue background for light mode */
-    color: #00796b; /* Cyan text color */
+    background-color: var(--light-background);
+    color: var(--light-color);
 }
 
-/* Button styles */
 button,
 input[type="submit"] {
-    background-color: #00695c; /* Dark cyan background for dark mode */
-    color: #ffffff; /* White text */
+    background-color: var(--button-background);
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     margin: 10px;
@@ -32,27 +53,26 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-    background-color: #004d40; /* Darker cyan on hover for dark mode */
+    background-color: var(--button-hover);
 }
 
 button.light-mode,
 input[type="submit"].light-mode {
-    background-color: #00acc1; /* Cyan background for light mode */
+    background-color: var(--button-light-background);
 }
 
 button.light-mode:hover,
 input[type="submit"].light-mode:hover {
-    background-color: #00838f; /* Darker cyan on hover for light mode */
+    background-color: var(--button-light-hover);
 }
 
-/* Input field styles */
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"] {
-    background-color: #004d40; /* Dark cyan background for dark mode */
-    color: #b2dfdb; /* Light blue text color */
-    border: 2px solid #00796b; /* Dark cyan border for dark mode */
+    background-color: var(--primary-default);
+    color: var(--input-color);
+    border: 2px solid var(--input-border);
     padding: 10px;
     margin: 10px;
     margin-left: 0;
@@ -65,58 +85,55 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus {
-    border-color: #004d40; /* Darker cyan on focus for dark mode */
+    border-color: var(--primary-hover);
 }
 
 input.light-mode[type="text"],
 input.light-mode[type="password"],
 input.light-mode[type="email"],
 input.light-mode[type="number"] {
-    background-color: #ffffff; /* White background for light mode */
-    color: #00796b; /* Cyan text color */
-    border: 2px solid #00acc1; /* Cyan border for light mode */
+    background-color: var(--input-light-background);
+    color: var(--light-color);
+    border: 2px solid var(--input-light-border);
 }
 
 input.light-mode[type="text"]:focus,
 input.light-mode[type="password"]:focus,
 input.light-mode[type="email"]:focus,
 input.light-mode[type="number"]:focus {
-    border-color: #00838f; /* Darker cyan on focus for light mode */
+    border-color: var(--input-light-focus-border);
 }
 
-/* Label styles */
 label {
     display: block;
     margin: 10px 0 5px;
     font-size: 16px;
-    color: #b2dfdb; /* Light blue text color */
+    color: var(--input-color);
 }
 
 label.light-mode {
-    color: #00796b; /* Cyan text color for light mode */
+    color: var(--light-color);
 }
 
-/* Output text styles */
 .output-text {
     display: block;
     margin: 10px 0;
     font-size: 16px;
-    color: #b2dfdb; /* Light blue text color */
+    color: var(--input-color);
 }
 
-.output-text.light-mode {
-    color: #00796b; /* Cyan text color for light mode */
+output-text.light-mode {
+    color: var(--light-color);
 }
 
-/* Sidebar styles */
 .sidebar {
     height: 100%;
     width: 250px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #004d40; /* Dark cyan background */
-    color: #b2dfdb; /* Light blue text color */
+    background-color: var(--sidebar-background);
+    color: var(--input-color);
     padding-top: 20px;
     overflow-x: hidden;
 }
@@ -125,22 +142,22 @@ label.light-mode {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
-    color: #b2dfdb; /* Light blue text color */
+    color: var(--input-color);
     display: block;
     transition: 0.3s;
     width: 100%;
 }
 
 .sidebar a:hover {
-    background-color: #00796b; /* Dark cyan on hover */
+    background-color: var(--sidebar-hover);
 }
 
 .sidebar button {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
-    color: #b2dfdb;
-    background-color: #00695c; /* Slightly different dark cyan background */
+    color: var(--input-color);
+    background-color: var(--button-background);
     margin: 0;
     display: block;
     transition: 0.3s;
@@ -149,19 +166,19 @@ label.light-mode {
 }
 
 .sidebar button:hover {
-    background-color: #004d40; /* Darker cyan on hover */
+    background-color: var(--button-hover);
 }
 
 .sidebar h1 {
-    color: #b2dfdb; /* Light blue text color */
+    color: var(--input-color);
     text-align: center;
     margin-bottom: 20px;
 }
 
 .main-content {
-    margin-left: 250px; /* Same as the width of the sidebar + some margin */
+    margin-left: 250px;
     padding: 20px;
-    background-color: #00796b; /* Dark cyan background */
+    background-color: var(--main-content-background);
     height: 95vh;
 }
 
@@ -188,10 +205,10 @@ module-script {
 h2 {
     font-size: 20px;
     font-weight: normal;
-    color: #b2dfdb;
+    color: var(--input-color);
     margin: 20px 0;
 }
 
 h2.light-mode {
-    color: #00796b; /* Cyan text color for light mode */
+    color: var(--light-color);
 }

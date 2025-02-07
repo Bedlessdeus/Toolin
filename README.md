@@ -1,6 +1,6 @@
 # Toolin
 
-Toolin is a versatile tool that allows users to create their own modules. It is designed to be user-friendly and flexible, enabling both simple and complex module creation.
+Toolin is a usefull Tool, that allows you to create a UI for modules with a few lines of code
 
 ## Creating Modules
 
@@ -96,5 +96,11 @@ Normal Modules allow you to have full control of what is rendered when a user cl
       </form>
   </div>
   ```
+### Creating and deploying Modules
+- **Write Module**
+  After picking what type of module you want to write, go ahead and write it, remember the Filename.
+- **Add Module Into index**
+  Locate the index.json file in the modules directory, open it, and add your Module. You will need the name That is displayed on the Sidebar and Title, the file name and the Description.
+- **Reload the Page**
 
 By using Toolin, you can easily create and manage your own modules, whether they are simple or complex. Explore the existing modules to get a better understanding of how to create your own.

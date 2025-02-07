@@ -35,12 +35,12 @@ If you're interested into what your code is resolved, the template is below!:
 ```
 
 A full translation is here:
-- **Your Code in .emod**
+**Your Code in .emod**
 ```javascript
 output = input * 2;
 ```
 
-- **Website Code**
+**Website Code**
 ```html
 <div>
     <h1>????</h1>

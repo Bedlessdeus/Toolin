@@ -6,15 +6,13 @@
         },
         {
             "name": "Integer to Hex",
-            "url": "int_hex.mod"
+            "description": "Translate Integer into Hexadecimal",
+            "url": "int_hex.emod"
         },
         {
             "name": "Integer to Octal",
-            "url": "int_oct.mod"
-        },
-        {
-            "name": "Experimental Mod",
-            "url": "test.emod"
+            "description": "Translate Integer into Octal",
+            "url": "int_oct.emod"
         }
     ]
 }

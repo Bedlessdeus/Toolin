@@ -35,7 +35,7 @@ const handleMod = (url, content) => {
             });
 }
 
-const handleEMod = async (url, content) => {
+const handleEMod = async (url, content, title, subtitle) => {
     if(!url.endsWith(".emod")) return;
     let item = document.createElement('script');
     document.querySelector('.main-content').innerHTML = await getMod("/modules/base.mod")
@@ -43,9 +43,15 @@ const handleEMod = async (url, content) => {
     item.textContent = 
     "document.querySelector('form').oninput = (e) => {\n" +
     "   let input = document.querySelector('input[name=\"input\"]').value;\n" +
-    "   let output;\n" + content + "\n" +
+    "   let output;\n   " + content + "\n" +
     "   document.querySelector('input[name=\"output\"]').value = output;\n" +
     "};\n"
+    if (document.querySelector('#title')) {
+        document.querySelector('#title').innerText = title;
+    }
+    if(document.querySelector('#subtitle')) {
+        document.querySelector('#subtitle').innerText = subtitle;
+    }
     document.body.appendChild(item)
 }
 
@@ -65,7 +71,7 @@ const loadMod = async () => {
             wipeScripts()
             let mod = await getMod('/modules/' + module.url)
             handleMod(module.url, mod)
-            handleEMod(module.url, mod)
+            handleEMod(module.url, mod, module.name, module.description)
         };
         sidebar.appendChild(link);
     });

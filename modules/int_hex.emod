@@ -1,0 +1,1 @@
+output = input.toString(16).padStart(4, '0');

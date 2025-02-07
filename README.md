@@ -67,6 +67,7 @@ output = input * 2;
 
 ### Normal Modules (.mod)
 
+<<<<<<< HEAD:README
 Normal Modules allow you to have full control of what is rendered when a user clicks on your module. Any script within a <module-script> tag, will be translated and moved to a <script> at runtime! Here is an example:
 
 - **Integer to Binary:**
@@ -96,3 +97,6 @@ Normal Modules allow you to have full control of what is rendered when a user cl
   ```
 
 By using Toolin, you can easily create and manage your own modules, whether they are simple or complex. Explore the existing modules to get a better understanding of how to create your own.
+=======
+Normal Modules offer more flexibility and control. They allow for more complex operations and interactions. You can reference existing `.mod` files to understand the structure and capabilities of these modules. Normal Modules can handle multiple inputs and outputs, and can perform a variety of tasks based on the user's requirements.
+>>>>>>> 140686c344cf5316a53870c188917de7fc8a3503:README.md

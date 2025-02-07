@@ -1,0 +1,15 @@
+const int_to_octal = (n) => {
+    if (n < 0) {
+        return '-' + int_to_octal(-n);
+    } else if (n === 0) {
+        return '0';
+    }
+    let octal = '';
+    while (n > 0) {
+        octal = (n % 8).toString() + octal;
+        n = Math.floor(n / 8);
+    }
+    return octal;
+}
+
+output = int_to_octal(parseInt(input))

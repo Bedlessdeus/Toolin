@@ -1,1 +1,1 @@
-output = input.toString(16).padStart(4, '0');
+output = parseInt(input).toString(16).padStart(4, '0').toUpperCase()

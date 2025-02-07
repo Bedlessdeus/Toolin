@@ -70,6 +70,7 @@ const loadMod = async () => {
         link.onclick = async () => {
             wipeScripts()
             let mod = await getMod('/modules/' + module.url)
+            document.title = "Toolin | " + module.name
             handleMod(module.url, mod)
             handleEMod(module.url, mod, module.name, module.description)
         };

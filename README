@@ -1,0 +1,19 @@
+# Toolin
+
+Toolin is a simple tool that allows users to create their own modules. It is designed to be easy to use and flexible, enabling both simple and complex module creation.
+
+## Creating Modules
+
+### Easy Modules (.emod)
+
+Easy Modules are designed for simplicity. When the script is loaded, an `input` and `output` are injected. To change the value, you only need to write into `output`. For example:
+
+```javascript
+output = input * 2;
+```
+
+This makes it easy to create basic modules without needing extensive programming knowledge.
+
+### Normal Modules (.mod)
+
+Normal Modules offer more flexibility and control. They allow for more complex operations and interactions. You can reference existing `.mod` files to understand the structure and capabilities of these modules. Normal Modules can handle multiple inputs and outputs, and can perform a variety of tasks based on the user's requirements.

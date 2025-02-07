@@ -43,9 +43,9 @@ const handleEMod = async (url, content) => {
     item.textContent = 
     "document.querySelector('form').oninput = (e) => {\n" +
     "   let input = document.querySelector('input[name=\"input\"]').value;\n" +
-    "   let output;\n" + content.replace("<br>", "") + "\n" +
+    "   let output;\n" + content + "\n" +
     "   document.querySelector('input[name=\"output\"]').value = output;\n" +
-    "};"
+    "};\n"
     document.body.appendChild(item)
 }
 

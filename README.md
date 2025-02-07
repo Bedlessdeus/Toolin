@@ -72,7 +72,7 @@ document.querySelector('form').oninput = (e) => {
 Normal Modules allow you to have full control of what is rendered when a user clicks on your module. Any script within a ```html <module-script>``` tag, will be translated and moved to a ```html <script>``` at runtime! Here is an example:
 
 - **Integer to Binary:**
-  ```mod
+  ```html
   <module-script>
       document.querySelector('form').oninput = (e) => {
           let input = document.querySelector('input[name="input"]').value;
